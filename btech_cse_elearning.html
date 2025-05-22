@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech CSE E-Learning - NotesLink</title>
+    <style>
+        :root {
+            --primary-color: #f56889;
+            --secondary-color: #c3c0ff;
+            --accent-color: #4895ef;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .semester-section {
+            margin-bottom: 3rem;
+        }
+        
+        .semester-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 5rem;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+        }
+        
+        .course-content {
+            padding: 1.5rem;
+        }
+        
+        .subject-list {
+            list-style: none;
+        }
+        
+        .subject-item {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .subject-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .subject-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.2s ease;
+        }
+        
+        .subject-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .subject-link i {
+            margin-right: 0.5rem;
+            color: red;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>B.Tech Computer Science Engineering</h1>
+        <p>Complete E-Learning Resources</p>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <h2>Welcome to NotesLink E-Learning Hub</h2>
+            <p>Access comprehensive video tutorials for all subjects in the B.Tech CSE curriculum. Click on any subject to watch the video lectures.</p>
+        </div>
+        
+        <!-- First Year -->
+        <div class="semester-section">
+            <h2 class="semester-title">First Year</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">First Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=bjJZKTrCBNw&list=PLU6SqdYcYsfIuZVt20v-eNZBfFLENrM1F" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Differential Equations and Linear Algebra</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=B2mseqYyvIA&list=PLg2LVpcRrOF6Sn9UO_1Yict2fJYKuQQHN" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Chemistry</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=wMb-CQSKLiA&list=PL3qvHcrYGy1sU_1nMMVrfFEhYROpQtVXV" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>English</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=icrAf1us2IQ&list=PL3qvHcrYGy1uF5KAGntUITTJ85Dm3Dtdy" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Basic Electronics</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=yPNhAks7mtE&list=PLmB0ThS_49Y6sr4kXOr-KPBtKEOyy7tPn" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Chemistry Lab</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=ZiQh8jA5tVM&pp=ygUEeW9nYQ%3D%3D" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Yoga</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=BsOeyVBCa3g&list=PLwymdQ84KI-x0T05PcG6D_2rhbWV_O93B&pp=0gcJCV8EOCosWNin"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Basic Electrical Engineering Lab</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=eiVmi6uNcXo&list=PLg2LVpcRrOF4DUVqLrAcv5ahv_5HQUalu&pp=0gcJCV8EOCosWNin"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Basic Civil Engineering</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=UudSwjqFdNM&list=PL9RcWoqXmzaKWxaNoDhW4O1kA0hK9AYys" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Communication Lab</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=JRT-KTFmiQo&list=PL2Q_0aXptwl1foD9eKFGXo3iQfOriDmp5" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Basic Electronics Lab</span>
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">Second Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=EDVJotmT584&list=PLU6SqdYcYsfILCRFpIM3fQdVIzOo71snJ" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Transforms and Numerical Methods</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=A9iH0A2Kxzw&list=PLg2LVpcRrOF5SHahQILs8jRZNOjqKBmbC" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Physics</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=4JC-oJsJ2zQ&list=PLA6AvNFIIigdBjtwsPjqSvmuIBUm9xn5x" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Science of Living Systems</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=OvbSR3w61lQ&list=PLT3bOBUU3L9hADhGPsZjSddwAC3BvJDnl" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Engineering Mechanics</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=irqbmMNs2Bo&t=986s&pp=ygUbYyBwcm9ncmFtbWluZyBmb3IgYmVnaW5uZXJz" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>C Programming Lab</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=5evfb2LP1Rw&list=PL_u2iJUox0XoWRHV2lluPBqLam_psaA8u&pp=0gcJCV8EOCosWNin" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Physics Lab</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=MtpxOdtS9KU&list=PL3qvHcrYGy1u2egw2tipHWODV6elVC2Gg" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Environmental Science</span>
+                                </a>
+                            </li>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=5xMnNdtJo60&list=PLWF9TXck7O_x_ELS1TWr4UynicysmoBjU" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Basic Instrumentation</span>
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Year -->
+        <div class="semester-section">
+            <h2 class="semester-title">Second Year</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">Third Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=NCwPdhohFao&list=PLbCAq4ggAQuFlnr-ag__VmL-cRJn4sgzd" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Scientific and Technical Writing</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=l_mlZlw0-xc&list=PLPwPlIulX0cz3QvsdquTH1NtasogRVwr-"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Economic Development</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=xLetJpcjHS0&list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Data Structures</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=o_nP6-Cy8X0&list=PLsh2FvSr3n7cY__MFw95avE0OpWPfLFBY"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Industry 4.0 Technologies </span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=V3iEsLPAD68&list=PLU6SqdYcYsfLRq3tu-g_hvkHDcorrtcBK"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Probability and Statistics</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=6Pb7pdCfhjY&list=PLm_MSClsnwm9K-0eKt3I1ZGpfqX109Ryy&pp=0gcJCV8EOCosWNin"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Digital Systems Design</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=58N2N7zJGrQ&list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Automata Theory and Formal Languages</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=C46QfTjVCNU&list=PLYVF2VnyLbbxVVgPnStxWfpVjg1r3MtR5"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Data Structures Laboratory</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=3rPrTAVzqew&list=PLSyil6ocWddyjSzPcoCzWF9xWUl7vjZ2q"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Digital Systems Design Laboratory</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">Fourth Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=QH8_u20rCzo&list=PLPwPlIulX0czv05H-EIotPpGRnKxWO1en"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>International Economic Cooperation</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=wGLTV8MgLlA&list=PLU6SqdYcYsfJ27O0dvuMwafS3X8CecqUg"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Discrete Mathmatics</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=bkSWJJZNgf8&list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Operating Systems</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=AEo4KgwKYoU&list=PLqleLpAMfxGCbdaJ6SoExDfHrTfRDeWeG" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>OOPJ</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=6Iu45VZGQDk&list=PLBlnK6fEyqRi_CUQ-FXxgzKQ1dwr_ZJWZ"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>DBMS</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=Ol8D69VKX2k&list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Computer Organization and Aechitecture</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=ybvbDlsDdk4&list=PLlr7wO747mNp5nn0hteJFnt1rpdx6GG-_" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>OS Lab</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>OOPJ Lab</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=hlGoQC332VM&pp=ygUIREJNUyBsYWI%3D" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>DBMS Lab</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <!-- Third Year -->
+        <div class="semester-section">
+            <h2 class="semester-title">Third Year</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">Fifth Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=C-SvA1HZkzA&list=PLDxxGoK9SC05PxS39HP6gBMucFxmqnX7e"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Computational Intelligence</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=Cb46_P12bMY&list=PL1QH9gyQXfguPNDTsnG90W2kBDQpYLDQr"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Compiler Design</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=uFDUXQ3JFBs&list=PLxCzCOWd7aiHexyDzYgry0YZN29e7HdNB"
+                                 class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Data Mining & Data Warehouse</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=klUH2wqxzyw&list=PLPIwNooIb9vhYroMrNpoBYiBUFzTwEZot" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Distributed Operating System</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=SJL9wNBBF_E&list=PLAggmvP4R7cZxqRyaxyQfjogPrvsbdfXY" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Engineering Econoonics</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=u8JZ9gU5o4g&list=PLxCzCOWd7aiHcmS4i14bI0VrMbZTUvlTa" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Design and Analysis of Algoriths</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=uJpQlyT_CK4&list=PLxCzCOWd7aiEed7SKZBnC6ypFDWYLRvB2" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Software Engineering</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=VwN91x5i25g&list=PLBlnK6fEyqRgMCUAG0XRw78UA8qnv6jEx" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Computer Networks</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=dQr4wZCiJJ4&list=PLhqYynNRO2Ug-MVZ9107Kw1AFywV90uiX" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Algoriths Lab</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=nC46dAj6XsY&list=PLletCzWRuhgg_Z9p5USL9DshJ1bwU02Ff" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>CN Lab</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">Sixth Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=9ltExh9enr0&list=PLh11ucJN276KHr_DR1Ok-EWYfSwtaQXND" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Software Project Management</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=dmGybCohHsw&list=PLxCzCOWd7aiHRHVUtR-O52MsrdUSrzuy4" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Cloud Computing</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=ocdPbrdzyu4&list=PL4gu8xQu0_5JBO1FKRO5p20wc8DprlOgn" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Machine Learning</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=thHnjYMUiU0&list=PLim9gWjsjN-M7jKqp65fE0WnvoqCfGxgF" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Universal Human Values</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=uB3i-qV6VdM&list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI&pp=0gcJCV8EOCosWNin" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Artificial Intelligence</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=ZagCMea9a_g&list=PLWAf8iNmXb4kSed2MWryDpZCdZh8r2D-s" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Application Development Lab</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=uB3i-qV6VdM&list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>AI Lab</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fourth Year -->
+        <div class="semester-section">
+            <h2 class="semester-title">Fourth Year</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">Seventh Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=3vDLtHsrNzY&list=PLEDvAVCQm_e20pcc_BXG0LE479HoVQrVD" 
+                                class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Professional practice Law</span>
+                                </a>
+                            </li>
+                            <li class="subject-item">
+                                <a href="https://www.youtube.com/watch?v=tCKMsl49EyM&list=PL9Cd7H8NFRQyHThG3ol8UEt4UD8Gyclo-" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Human Resource Managemen</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">Eighth Semester</div>
+                    <div class="course-content">
+                        <ul class="subject-list">
+                            <li class="subject-item">
+                                <a href="................" class="subject-link" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Major Project</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 NotesLink.in | BTech CSE E-Learning Portal</p>
+        <p>All YouTube links are provided for educational purposes only</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any JavaScript functionality here
+            console.log('E-Learning page loaded successfully!');
+        });
+    </script>
+</body>
+</html>
